@@ -20,7 +20,8 @@
   AntDesign&Procomponents组件库  
   Umi4前端框架  
   OpenAPI前端代码生成  
-  Node 22.3.0  
+  Node 22.3.0
+
  后端：  
   Java 21.0.6  
   Java Spring Boot  
@@ -33,7 +34,8 @@
   Spring Cloud Gateway微服务网关  
   Hutool、Apache Common Utils、Gson等工具库  
   Redis 5.0.14.1  
-  Nacos 2.5.1  
+  Nacos 2.5.1
+
  其他：  
   natapp  
 ```
