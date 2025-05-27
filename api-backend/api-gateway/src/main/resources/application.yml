@@ -1,0 +1,89 @@
+server:
+  port: 8090
+
+spring:
+  application:
+    name: api-gateway
+  task:
+    scheduling:
+      enabled: true
+  cloud:
+    nacos:
+      username: nacos
+      password: nacos
+      config:
+        server-addr: localhost:8848   # 确保 Nacos 服务器地址正确
+        file-extension: json
+        group: DEFAULT_GROUP
+        data-id: gateway-routes.json  # TODO
+        refresh: true # 启用动态刷新
+      discovery:
+        server-addr: localhost:8848   # 确保 Nacos 发现服务的地址正确
+    gateway:
+      default-filters:
+        - AddResponseHeader=source, wxy # 全局的染色  # TODO
+      forwarded-headers-strategy: framework
+      discovery:
+        locator:
+          enabled: true # 启用服务发现
+  config:
+    import: nacos:localhost:8848 # 指定 Nacos 服务器地址
+#    gateway:
+#      default-filters:
+#        - AddResponseHeader=source, wxy
+#      routes:
+#        - id: name_api
+#          uri: http://localhost:8124
+#          predicates:
+#            - Path=/api/name/**
+#
+#        - id: sweet_words_api
+#          uri: http://localhost:8125
+#          predicates:
+#            - Path=/api/sweet/**
+#
+#        - id: weather_api
+#          uri: http://localhost:8126
+#          predicates:
+#            - Path=/api/weather/**
+#
+#        - id: sensitive_word_api
+#          uri: http://localhost:8127
+#          predicates:
+#            - Path=/api/filter/**
+
+logging:
+  level:
+    org:
+      springframework:
+        cloud:
+          gateway: INFO
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"  # 暴露所有端点
+  endpoint:
+    gateway:
+      enabled: true  # 启用 Gateway 的 Actuator 端点
+
+dubbo:
+  application:
+    name: api-gateway
+  qos:
+    enable: true       # 启用 QoS
+    port: 33333        # 自定义端口
+    accept-foreign-ip: false
+  protocol:
+    name: dubbo
+    port: 20880
+  registry:
+    id: nacos-registry
+    address: nacos://localhost:8848
+    check: false  # 禁用启动时检查
+  consumer:
+    timeout: 5000 # 超时时间设置为5秒
+    retries: 3    # 重试次数设置为3次
+
+

@@ -1,0 +1,21 @@
+/* 设置 Table 的背景透明 */
+.ant-table {
+    background-color: transparent !important; /* 使整个表格背景透明 */
+  }
+  
+  /* 保证 Table 的行和单元格背景透明 */
+  .ant-table-tbody > tr > td {
+    background-color: transparent !important; /* 设置单元格背景透明 */
+    color: #000 !important; /* 确保数据的文字颜色不透明 */
+  }
+  
+  .ant-table-thead > tr > th {
+    background-color: transparent !important; /* 设置表头背景透明 */
+    color: #000 !important; /* 设置表头文字颜色 */
+  }
+  
+  /* 设置悬停行的背景透明，防止在 hover 时出现背景色 */
+  .ant-table-tbody > tr:hover {
+    background-color: rgba(255, 255, 255, 0.2) !important; /* 设置 hover 行背景透明度 */
+  }
+  

@@ -1,0 +1,169 @@
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
+    'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+    'Noto Color Emoji';
+}
+
+.colorWeak {
+  filter: invert(80%);
+}
+
+.ant-layout {
+  min-height: 100vh;
+}
+.ant-pro-sider.ant-layout-sider.ant-pro-sider-fixed {
+  left: unset;
+}
+
+canvas {
+  display: block;
+}
+
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f5f7fa;
+}
+
+// 背景虚化效果的全局样式
+.blur-bg {
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+:global{
+  .ant-table-container .ant-table-cell{
+    white-space: nowrap;
+  }
+  
+  // 添加卡片阴影和过渡效果
+  .ant-card {
+    border-radius: 8px;
+    box-shadow: 0 1px 2px -2px rgba(0, 0, 0, 0.05), 
+                0 3px 6px 0 rgba(0, 0, 0, 0.04), 
+                0 5px 12px 4px rgba(0, 0, 0, 0.03);
+    transition: all 0.3s ease;
+    
+    &:hover {
+      box-shadow: 0 4px 8px -2px rgba(0, 0, 0, 0.08), 
+                  0 8px 16px 0 rgba(0, 0, 0, 0.06), 
+                  0 12px 24px 8px rgba(0, 0, 0, 0.04);
+      transform: translateY(-2px);
+    }
+  }
+  
+  // 美化按钮
+  .ant-btn {
+    border-radius: 8px !important;
+    font-weight: 500;
+    transition: all 0.25s ease !important;
+    
+    &-primary {
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(22, 119, 255, 0.4) !important;
+      }
+    }
+    
+    &:not(.ant-btn-primary):hover {
+      transform: translateY(-2px);
+      border-color: #1677ff !important;
+    }
+  }
+  
+  // 表格悬停效果
+  .ant-table-tbody > tr:hover > td {
+    background-color: rgba(22, 119, 255, 0.05) !important;
+  }
+  
+  // 页面容器
+  .ant-pro-page-container {
+    margin: 16px;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+  }
+  
+  // 美化标题
+  h1, h2, h3, h4, h5 {
+    font-weight: 600;
+    margin-bottom: 1em;
+    color: #111827;
+  }
+  
+  // 头部导航栏
+  .ant-layout-header {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+  }
+  
+  // 美化表单
+  .ant-form-item-label > label {
+    font-weight: 500;
+  }
+  
+  .ant-input, .ant-select-selector, .ant-input-password {
+    border-radius: 8px !important;
+    transition: all 0.3s ease;
+    border-color: rgba(0, 0, 0, 0.1) !important;
+    background-color: rgba(255, 255, 255, 0.8) !important;
+    
+    &:hover, &:focus {
+      border-color: #1677ff !important;
+      box-shadow: 0 0 0 2px rgba(22, 119, 255, 0.1) !important;
+    }
+  }
+  
+  // 增强登录注册页面背景虚化
+  .ant-pro-form-login-container {
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+  }
+}
+
+@media (max-width: 768px) {
+  .ant-table {
+    width: 100%;
+    overflow-x: auto;
+    &-thead > tr,
+    &-tbody > tr {
+      > th,
+      > td {
+        white-space: pre;
+        > span {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+// 页面切换动画
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 200ms;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 200ms;
+}

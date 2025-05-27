@@ -1,0 +1,23 @@
+/* 给整个 ProTable 设置透明背景，同时保持数据不透明 */
+.ant-pro-table {
+    background-color: transparent !important; /* 使表格背景透明 */
+  }
+  
+  .ant-pro-table .ant-table {
+    background-color: transparent !important; /* 表格容器背景透明 */
+  }
+  
+  .ant-pro-table .ant-table-tbody > tr > td {
+    background-color: transparent !important; /* 单元格背景透明 */
+    color: #000; /* 设置单元格内容不透明，确保数据清晰可见 */
+  }
+  
+  .ant-pro-table .ant-table-thead > tr > th {
+    background-color: transparent !important; /* 表头背景透明 */
+    color: #000; /* 设置表头文字颜色 */
+  }
+  
+  .ant-pro-table .ant-table-tbody > tr:hover {
+    background-color: rgba(255, 255, 255, 0.1) !important; /* 设置悬停行的背景透明 */
+  }
+  

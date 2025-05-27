@@ -1,0 +1,8 @@
+server:
+  port: 8127
+  servlet:
+    context-path: /api
+
+spring:
+  application:
+    name: sensitive_word_api
