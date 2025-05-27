@@ -6,8 +6,7 @@
 包括游客、用户和管理员。核心功能模块包括用户管理模块、接口管理模块、支付模块、订单管理模块、资源调配模块、通知管理模块、资源管理模块。
 
 #### 软件架构
-后端：backend项目（api-backend）、开发者工具（api-client-sdk）、公共模块(api-common)、模拟接口(api-interface)、网关(api-gateway)
-##
+后端：backend项目（api-backend）、开发者工具（api-client-sdk）、公共模块(api-common)、模拟接口(api-interface)、网关(api-gateway)  
 前端：开发者平台（官网 api-docs）、接口调用平台(api-frontend)
 
 #### 安装教程
