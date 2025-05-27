@@ -10,18 +10,37 @@
 前端：开发者平台（官网 api-docs）、接口调用平台(api-frontend)
 
 #### 环境配置
- 1. natapp安装（启动命令：natapp -authtoken=yours）  
- 2. Nacos 2.5.1安装（启动命令：startup.cmd -m standalone）  
- 3. Java 21.0.6  
- 4. Node 22.3.0  
- 5. Mysql 8.1.0  
- 6. Redis 5.0.14.1  
+前端：  
+ React 18  
+ AntDesignPro5.x脚手架  
+ AntDesign&Procomponents组件库  
+ Umi4前端框架  
+ OpenAPI前端代码生成  
+ Node 22.3.0  
+后端：  
+ Java 21.0.6  
+ Java Spring Boot  
+ MySQL数据库 8.1.0  
+ MyBatis-Plus及MyBatis X自动生成  
+ API签名认证(Http调用)  
+ Spring Boot Starter(SDK开发)  
+ Dubbo分布式(RPC、Nacos)  
+ Swagger+Knife4j接口文档生成  
+ Spring Cloud Gateway微服务网关  
+ Hutool、Apache Common Utils、Gson等工具库  
+ Redis 5.0.14.1  
+ Nacos 2.5.1  
+其他：  
+ natapp  
  
 #### 安装教程
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+ 1. 先本地install安装api-common 模块  
+ 2. 然后本地install安装api-sdk 模块  
+ 3. 启动前端api-front和api-docs  
+ 4. 启动后端api-backend  
+ 5. 启动后端api-gateway  
+ 6. 启动模拟接口（api-interface模块中的三个模拟接口）  
 
 
 
